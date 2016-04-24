@@ -22,6 +22,7 @@ public:
     QAction *fitToWindowAct;
     QAction *zoomInAct;
     QAction *zoomOutAct;
+    Encapsulator *capsule;
     void updateActions();
 
 #ifndef QT_NO_PRINTER
@@ -35,23 +36,11 @@ private:
     void createActions();
     void createMenus();
 
-
-    Encapsulator *capsule;
-
-
-//#ifndef QT_NO_PRINTER
-//    QPrinter printer;
-//#endif
-
     QAction *openAct;
-
     QAction *exitAct;
-
     QAction *normalSizeAct;
-
     QAction *aboutAct;
     QAction *aboutQtAct;
-
     QMenu *fileMenu;
     QMenu *viewMenu;
     QMenu *helpMenu;

@@ -15,6 +15,9 @@ private:
     QLCDNumber *lcd;
 signals:
 
+public slots:
+    void speakTime();
+
 private slots:
     void showTime();
 };

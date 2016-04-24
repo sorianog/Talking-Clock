@@ -16,12 +16,13 @@ TalkingClock::TalkingClock()
     createActions();
     createMenus();
 
-    setWindowTitle(tr("Talking Clock"));
+    setWindowTitle(tr("Talking Clock By Gerald Soriano & Zach Watts"));
     resize(500, 400);
 }
 
-
-
+/**
+ * @brief TalkingClock::about
+ */
 void TalkingClock::about()
 {
     QMessageBox::about(this, tr("About Talking Clock"),
@@ -32,6 +33,9 @@ void TalkingClock::about()
                "</p><p>This app uses QT's Image Viewer and Digital Clock examples.</p>"));
 }
 
+/**
+ * @brief TalkingClock::createActions
+ */
 void TalkingClock::createActions()
 {
     openAct = new QAction(tr("&Open..."), this);
@@ -75,6 +79,9 @@ void TalkingClock::createActions()
     connect(aboutQtAct, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
 }
 
+/**
+ * @brief TalkingClock::createMenus
+ */
 void TalkingClock::createMenus()
 {
     fileMenu = new QMenu(tr("&File"), this);
@@ -99,6 +106,9 @@ void TalkingClock::createMenus()
     menuBar()->addMenu(helpMenu);
 }
 
+/**
+ * @brief TalkingClock::updateActions
+ */
 void TalkingClock::updateActions()
 {
     zoomInAct->setEnabled(!fitToWindowAct->isChecked());

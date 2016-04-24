@@ -15,10 +15,16 @@ TEMPLATE = app
 SOURCES += main.cpp\
         talkingclock.cpp \
     imageviewer.cpp \
-    encapsulator.cpp
+    encapsulator.cpp \
+    gpio/GPIO.cpp \
+    gpio/PWM.cpp \
+    gpio/util.cpp
 
 HEADERS  += talkingclock.h \
     imageviewer.h \
-    encapsulator.h
+    encapsulator.h \
+    gpio/GPIO.h \
+    gpio/PWM.h \
+    gpio/util.h
 
 FORMS    += talkingclock.ui
