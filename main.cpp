@@ -2,11 +2,12 @@
 #include <QApplication>
 #include <QTime>
 #include "gpio/GPIO.h"
+
 /**
  * SE3910 Spring 2016 - Lab 6
  * Author: sorianog, wattsz
  *
- * @brief main
+ * @brief main - show the main UI and configure the push button for the system
  * @param argc
  * @param argv
  * @return
@@ -38,7 +39,7 @@ int hardBtnClicked(int var)
     QString timeText = time.toString("hh:mm:ss");
     QString createAudio = "espeak -w time.wav 'The current time is " + timeText + ". Beep'";
     system(qPrintable(createAudio));
-    QString playTime = "mplayer time.wav";
+    QString playTime = "mplayer -ao alsa:device=hw=1 time.wav";
     system(qPrintable(playTime));
     return 0;
 }

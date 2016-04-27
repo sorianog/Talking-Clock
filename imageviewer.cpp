@@ -1,5 +1,6 @@
 #include "imageviewer.h"
 #include <QtGui>
+
 /**
  * SE3910 Spring 2016 - Lab 6
  * Author: sorianog, wattsz

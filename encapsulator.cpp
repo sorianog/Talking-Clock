@@ -64,6 +64,6 @@ void Encapsulator::speakTime()
     QString timeText = time.toString("hh:mm:ss");
     QString createAudio = "espeak -w time.wav 'The current time is now" + timeText + ". Beep'";
     system(qPrintable(createAudio));
-    QString playTime = "mplayer time.wav";
+    QString playTime = "mplayer -ao alsa:device=hw=1 time.wav";
     system(qPrintable(playTime));
 }

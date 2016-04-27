@@ -3,6 +3,7 @@
 #include <QtGui>
 #include "imageviewer.h"
 #include "encapsulator.h"
+
 /**
  * SE3910 Spring 2016 - Lab 6
  * Author: sorianog, wattsz
@@ -35,6 +36,7 @@ void TalkingClock::about()
 
 /**
  * @brief TalkingClock::createActions
+ * Connect all the necessary actions to their respective slots
  */
 void TalkingClock::createActions()
 {
@@ -81,6 +83,7 @@ void TalkingClock::createActions()
 
 /**
  * @brief TalkingClock::createMenus
+ * Construct the menu itmes for the main menu bar
  */
 void TalkingClock::createMenus()
 {
@@ -108,6 +111,7 @@ void TalkingClock::createMenus()
 
 /**
  * @brief TalkingClock::updateActions
+ * Enable/disable the necessary actions
  */
 void TalkingClock::updateActions()
 {
